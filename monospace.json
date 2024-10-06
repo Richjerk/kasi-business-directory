@@ -1,0 +1,6 @@
+{
+    "api": {
+      "start": "node server.js" // Adjust this command as necessary to start your API service
+    }
+  }
+  

@@ -1,0 +1,3 @@
+{
+    "php.validate.executablePath": "C:/path/to/your/php.exe" // Replace this with the actual path to your PHP executable
+}

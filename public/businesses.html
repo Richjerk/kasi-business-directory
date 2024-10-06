@@ -1,0 +1,81 @@
+<!-- public/businesses.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listed Businesses</title>
+  <style>
+    /* Add your CSS styling here */
+    #businessesList div {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Listed Businesses</h1>
+  
+  <input type="text" id="searchQuery" placeholder="Search for a business...">
+  <button id="searchButton">Search</button>
+
+  <div id="businessesList"></div>
+
+  <script>
+    async function fetchBusinesses() {
+      const response = await fetch('/businesses');
+      const businesses = await response.json();
+      
+      if (businesses.length > 0) {
+        displayBusinesses(businesses);
+      } else {
+        document.getElementById('businessesList').innerHTML = '<p>No businesses listed yet.</p>';
+      }
+    }
+
+    async function searchBusinesses(query) {
+      const response = await fetch(`/search-business?query=${query}`);
+      const result = await response.json();
+
+      if (result.message) {
+        document.getElementById('businessesList').innerHTML = `<p>${result.message}</p>`;
+      } else {
+        displayBusinesses(result);
+      }
+    }
+
+    function displayBusinesses(businesses) {
+      const businessesList = document.getElementById('businessesList');
+      businessesList.innerHTML = '';
+
+      businesses.forEach(business => {
+        const businessElement = document.createElement('div');
+        businessElement.innerHTML = `
+          <h2>${business.name}</h2>
+          <p>${business.description}</p>
+          <p>Email: ${business.email}</p>
+          <p>Phone: ${business.phone}</p>
+          <p>Address: ${business.address}</p>
+          <img src="${business.imageUrl}" alt="${business.name}" width="200">
+        `;
+        businessesList.appendChild(businessElement);
+      });
+    }
+
+    // Fetch all businesses on page load
+    fetchBusinesses();
+
+    // Search when clicking the search button
+    document.getElementById('searchButton').addEventListener('click', () => {
+      const query = document.getElementById('searchQuery').value.trim();
+      if (query) {
+        searchBusinesses(query);
+      } else {
+        fetchBusinesses(); // Show all businesses if search query is empty
+      }
+    });
+  </script>
+</body>
+</html>
+
