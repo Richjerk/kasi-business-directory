@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasi Business Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Kasi Online Business Directory</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#list-your-business">List Your Business</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Kasi Online Business Directory</h2>
+        <p>Connecting local businesses with their communities.</p>
+        <button onclick="openChatbot()">Chat with Our AI Assistant</button>
+    </section>
+
+    <section id="list-your-business">
+        <h2>List Your Business</h2>
+        <form id="business-form">
+            <label for="business-name">Business Name:</label>
+            <input type="text" id="business-name" name="business-name" required>
+
+            <label for="business-description">Business Description:</label>
+            <textarea id="business-description" name="business-description" required></textarea>
+
+            <label for="business-email">Business Email:</label>
+            <input type="email" id="business-email" name="business-email" required>
+
+            <label for="business-phone">Business Phone:</label>
+            <input type="tel" id="business-phone" name="business-phone" required>
+
+            <label for="business-address">Business Address:</label>
+            <input type="text" id="business-address" name="business-address" required>
+
+            <label for="business-image">Upload Products/Services Image:</label>
+            <input type="file" id="business-image" name="business-image">
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>Find local businesses in your area with ease. Simplified for the community.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@kasi-biz-directory.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mafisa Tech Affiliate Pty Ltd</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
