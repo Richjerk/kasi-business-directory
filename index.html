@@ -55,15 +55,41 @@
         <p>Find local businesses in your area with ease. Simplified for the community.</p>
     </section>
 
+    <section id="business-listings">
+        <h2>Local Businesses</h2>
+        <div id="business-list"></div>
+    </section>
+
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Email: support@kasi-biz-directory.com</p>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Mafisa Tech Affiliate Pty Ltd</p>
-    </footer>
+    <!-- Map Section -->
+    <div id="map" style="height: 400px; width: 100%;"></div>
 
+    <!-- Chatbot Section -->
+    <div id="chatbot">
+        <h3>Ask Our Chatbot</h3>
+        <textarea id="user-query" placeholder="Ask a question about businesses..."></textarea>
+        <button onclick="sendQuery()">Ask</button>
+        <p id="chatbot-response"></p>
+    </div>
+
+    <footer>
+    <p>Copyright &copy; 2024 Mafisa Tech Affiliate Pty Ltd. All rights reserved.</p>
+</footer>
+
+
+    <!-- Include your main.js script just before closing the body -->
     <script src="main.js"></script>
+
+    <!-- Google Maps API -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 </body>
 </html>
+
+
+
