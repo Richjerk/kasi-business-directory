@@ -150,7 +150,7 @@ function initMap(businesses) {
 
 // Initialize Gemini Client
 import { GeminiClient } from "@langchain/google-genai";
-const gemini = new GeminiClient({ apiKey: "your-api-key" }); // Replace with your actual API key
+const gemini = new GeminiClient({ apiKey: "AIzaSyBu29op0LemGPSu3adIzZCF9SS-ecngRM4" }); // Replace with your actual API key
 
 async function sendQuery() {
     const userQuery = document.getElementById("user-query").value;
@@ -167,5 +167,46 @@ async function sendQuery() {
         responseElement.innerText = "Error: Unable to get a response from the chatbot.";
     }
 }
+
+// Import Algolia and InstantSearch.js
+import algoliasearch from "algoliasearch/lite";
+import instantsearch from "instantsearch.js/es";
+import { searchBox, hits, pagination } from "instantsearch.js/es/widgets";
+
+// Initialize Algolia search client
+const searchClient = algoliasearch('B1G2GM9NG0', 'aadef574be1f9252bb48d4ea09b5cfe5');
+
+// Initialize InstantSearch.js
+const search = instantsearch({
+  indexName: 'demo_ecommerce',
+  searchClient,
+});
+
+// Add widgets to InstantSearch
+search.addWidgets([
+  searchBox({
+    container: '#searchbox',
+    placeholder: 'Search for businesses...',
+  }),
+  hits({
+    container: '#hits',
+    templates: {
+      item(hit) {
+        return `
+          <div>
+            <strong>${hit.name}</strong>
+            <p>${hit.description}</p>
+          </div>
+        `;
+      },
+    },
+  }),
+  pagination({
+    container: '#pagination',
+  }),
+]);
+
+// Start the search
+search.start();
 
 

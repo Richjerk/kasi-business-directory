@@ -6,6 +6,84 @@
     <title>Kasi Business Directory</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #374151;
+        }
+
         #business-listings {
             margin: 50px auto;
             text-align: center;
@@ -29,6 +107,28 @@
         .business-card p {
             font-size: 14px;
             color: #374151;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        #chatbot {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
@@ -83,7 +183,14 @@
 
     <section id="business-listings">
         <h2>Local Businesses</h2>
-        <div id="business-list"></div>
+        <!-- Search Box -->
+        <div id="searchbox"></div>
+
+        <!-- Search Results -->
+        <div id="hits"></div>
+
+        <!-- Pagination -->
+        <div id="pagination"></div>
     </section>
 
     <section id="contact">
@@ -92,7 +199,7 @@
     </section>
 
     <!-- Map Section -->
-    <div id="map" style="height: 400px; width: 100%;"></div>
+    <div id="map"></div>
 
     <!-- Chatbot Section -->
     <div id="chatbot">
@@ -111,7 +218,18 @@
 
     <!-- Google Maps API -->
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCclGuykmzig6GhOHwOO3h7PlspyasKlic&callback=initMap">
     </script>
+
+    <!-- Algolia search only version -->
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.24.0/dist/algoliasearch-lite.umd.js"></script>
+
+    <!-- InstantSearch.js integration -->
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.24.0"></script>
+
+    <!-- Main script -->
+    <script src="main.js"></script>
 </body>
 </html>
+
+
