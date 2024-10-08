@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kasi Business Directory</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -55,7 +54,7 @@
         <p>Find local businesses in your area with ease. Simplified for the community.</p>
     </section>
 
-    <section id="business-listings">
+    <section id="business-listings" style="margin: 50px auto; text-align: center;">
         <h2>Local Businesses</h2>
         <div id="business-list"></div>
     </section>
@@ -77,9 +76,31 @@
     </div>
 
     <footer>
-    <p>Copyright &copy; 2024 Mafisa Tech Affiliate Pty Ltd. All rights reserved.</p>
-</footer>
+        <p>Copyright &copy; 2024 Mafisa Tech Affiliate Pty Ltd. All rights reserved.</p>
+    </footer>
 
+    <!-- Business Card Style -->
+    <style>
+        .business-card {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 15px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .business-card h3 {
+            color: #1e3a8a;
+        }
+
+        .business-card p {
+            font-size: 14px;
+            color: #374151;
+        }
+    </style>
 
     <!-- Include your main.js script just before closing the body -->
     <script src="main.js"></script>
@@ -90,6 +111,3 @@
     </script>
 </body>
 </html>
-
-
-
