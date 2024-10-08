@@ -6,10 +6,10 @@
     "start": "vite"
   },
   "dependencies": {
-    "firebase": "^9.22.2" 
+    "algoliasearch": "^5.8.0",
+    "firebase": "^9.22.2"
   },
   "devDependencies": {
     "vite": "^4.4.5"
   }
 }
-
