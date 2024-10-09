@@ -1,26 +1,26 @@
 [build]
-  command = "flutter build web"      # Adjusted to your Flutter build command
-  publish = "build/web"              # Updated to the Flutter web build folder
+  command = "flutter build web"              # Command to build your Flutter web app
+  publish = "build/web"                      # Directory for the built Flutter web app
 
 [dev]
-  command = "flutter run"             # Optional: Command for local development
-  port = 3000                          # Optional: Local development port
+  command = "flutter run"                     # Optional: Command for local development
+  port = 3000                                  # Optional: Local development port
 
 [functions]
-  directory = "netlify/functions"     # Adjust this if you have serverless functions
+  directory = "netlify/functions"             # Adjust if you have serverless functions
 
 [context.production.environment]
-  CLOUDINARY_CLOUD_NAME = ""          # Set your Cloudinary cloud name
-  GEMINI_API_KEY = ""                 # Set your Gemini API key
-  GOOGLE_API_KEY = ""                  # Set your Google API key
-  GOOGLE_CUSTOM_SEARCH_API_KEY = ""    # Set your Google custom search API key
-  GOOGLE_GEMINI_API_KEY = ""           # Set your Google Gemini API key
-  MONGODB_API_KEY = ""                 # Set your MongoDB API key
-  MONGODB_EDGE_SERVER_TOKEN = ""       # Set your MongoDB edge server token
+  CLOUDINARY_CLOUD_NAME = ""                  # Set your Cloudinary cloud name
+  GEMINI_API_KEY = ""                         # Set your Gemini API key
+  GOOGLE_API_KEY = ""                          # Set your Google API key
+  GOOGLE_CUSTOM_SEARCH_API_KEY = ""           # Set your Google custom search API key
+  GOOGLE_GEMINI_API_KEY = ""                  # Set your Google Gemini API key
+  MONGODB_API_KEY = ""                         # Set your MongoDB API key
+  MONGODB_EDGE_SERVER_TOKEN = ""               # Set your MongoDB edge server token
   # Add any other environment variables you need here
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"                # Example: Next.js plugin
+  package = "@netlify/plugin-nextjs"         
   # Uncomment and add your desired plugins as needed
   # package = "netlify-plugin-cloudinary"
   # package = "netlify-plugin-amp-server-side-rendering"
@@ -29,8 +29,6 @@
   # package = "netlify-plugin-inline-functions-env"
   # package = "netlify-plugin-image-optim"
   # package = "netlify-plugin-inline-source"
-
-# Specify any other configurations as needed
 
  
 
