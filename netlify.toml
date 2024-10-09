@@ -1,7 +1,15 @@
 [build]
   command = "npm run build"
-  publish = "dist"
+  publish = "dist"  # Adjust this to your actual build folder
+
+  # Uncomment this if you use serverless functions
+  # functions = "netlify/functions"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Remove or comment out the plugin if you don't need it:
+# [[plugins]]
+#   package = "netlify-plugin-inline-functions-env"
+
 
