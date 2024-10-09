@@ -1,20 +1,39 @@
 [build]
-  command = "flutter build web"  # Adjusted to your Flutter build command
-  publish = "build/web"          # Updated to the Flutter web build folder
+  command = "flutter build web"      # Adjusted to your Flutter build command
+  publish = "build/web"              # Updated to the Flutter web build folder
 
-  # Uncomment this if you use serverless functions
-  # functions = "netlify/functions"
+[dev]
+  command = "flutter run"             # Optional: Command for local development
+  port = 3000                          # Optional: Local development port
+
+[functions]
+  directory = "netlify/functions"     # Adjust this if you have serverless functions
+
+[context.production.environment]
+  CLOUDINARY_CLOUD_NAME = ""          # Set your Cloudinary cloud name
+  GEMINI_API_KEY = ""                 # Set your Gemini API key
+  GOOGLE_API_KEY = ""                  # Set your Google API key
+  GOOGLE_CUSTOM_SEARCH_API_KEY = ""    # Set your Google custom search API key
+  GOOGLE_GEMINI_API_KEY = ""           # Set your Google Gemini API key
+  MONGODB_API_KEY = ""                 # Set your MongoDB API key
+  MONGODB_EDGE_SERVER_TOKEN = ""       # Set your MongoDB edge server token
+  # Add any other environment variables you need here
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"  # Plugin for Next.js, keep it if you're using Next.js
+  package = "@netlify/plugin-nextjs"                # Example: Next.js plugin
+  # Uncomment and add your desired plugins as needed
+  # package = "netlify-plugin-cloudinary"
+  # package = "netlify-plugin-amp-server-side-rendering"
+  # package = "netlify-plugin-html-validate"
+  # package = "netlify-plugin-inline-critical-css"
+  # package = "netlify-plugin-inline-functions-env"
+  # package = "netlify-plugin-image-optim"
+  # package = "netlify-plugin-inline-source"
 
-# Remove or comment out any plugins that are not needed
-# [[plugins]]
-#   package = "netlify-plugin-inline-functions-env"
+# Specify any other configurations as needed
 
-# Example of including another plugin without specifying the version
-[[plugins]]
-  package = "plugin-name"  # Replace 'plugin-name' with the actual plugin you need
+ 
 
-# No duplicate or outdated plugin versions here
+
+
 

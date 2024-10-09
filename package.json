@@ -1,16 +1,31 @@
 {
   "name": "kasi-business-directory",
+  "private": true,
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "build": "vite build",
-    "start": "vite"
+    "start": "vite",
+    "dev": "vite",
+    "preview": "vite preview"
   },
   "dependencies": {
     "algoliasearch": "^5.8.0",
     "firebase": "^9.22.2",
-    "instantsearch.js": "^4.74.2"
+    "instantsearch.js": "^4.74.2",
+    "@google/generative-ai": "^0.1.0",
+    "@langchain/core": "^0.1.11",
+    "@langchain/google-genai": "^0.0.7",
+    "base64-js": "^1.5.1",
+    "markdown-it": "^13.0.2"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.7.3",
+    "netlify-plugin-cloudinary": "^1.17.0",
+    "netlify-plugin-image-optim": "^0.4.0",
+    "netlify-plugin-inline-functions-env": "^1.0.9",
+    "netlify-plugin-inline-source": "^1.0.4",
     "vite": "^4.4.5"
   }
 }
+
