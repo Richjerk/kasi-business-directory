@@ -1,15 +1,20 @@
 [build]
-  command = "npm run build"
-  publish = "dist"  # Adjust this to your actual build folder
+  command = "flutter build web"  # Adjusted to your Flutter build command
+  publish = "build/web"          # Updated to the Flutter web build folder
 
   # Uncomment this if you use serverless functions
   # functions = "netlify/functions"
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-nextjs"  # Plugin for Next.js, keep it if you're using Next.js
 
-# Remove or comment out the plugin if you don't need it:
+# Remove or comment out any plugins that are not needed
 # [[plugins]]
 #   package = "netlify-plugin-inline-functions-env"
 
+# Example of including another plugin without specifying the version
+[[plugins]]
+  package = "plugin-name"  # Replace 'plugin-name' with the actual plugin you need
+
+# No duplicate or outdated plugin versions here
 
