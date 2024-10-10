@@ -37,3 +37,7 @@
 # [[plugins]]
 #   package = "netlify-plugin-inline-source"     # Optional: Inline source plugin
 
+[functions]
+  directory = "netlify/functions"               # Directory for serverless functions
+
+
