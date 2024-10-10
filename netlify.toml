@@ -17,9 +17,6 @@
   MONGODB_EDGE_SERVER_TOKEN = ""                 # Set your MongoDB edge server token
   # Add any other environment variables you need here
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"            # Plugin for Next.js
-
 # Uncomment and add your desired plugins as needed
 # [[plugins]]
 #   package = "netlify-plugin-cloudinary"        # Optional: Cloudinary plugin
