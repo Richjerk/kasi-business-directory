@@ -1,6 +1,4 @@
-{
-    "api": {
-      "start": "node server.js" // Adjust this command as necessary to start your API service
-    }
-  }
+export port=5000 #dont use restricted ports (8000, 9000-9002)
+export API_SERVICE="https://$port-$WEB_HOST"
+echo $API_SERVICE
   
