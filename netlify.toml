@@ -1,43 +1,43 @@
 [build]
-  command = "flutter build web"                 # Command to build your Flutter web app
-  publish = "build/web"                         # Directory for the built Flutter web app
-  functions = "netlify/functions"               # Directory for serverless functions
+  command = "flutter build web"               
+  publish = "build/web"                        
+  functions = "netlify/functions"
+
+           
 
 [dev]
-  command = "flutter run"                       # Optional: Command for local development
-  port = 3000                                   # Optional: Local development port
+  command = "flutter run"                    
+  port = 3000                                   
 
 [context.production.environment]
-  CLOUDINARY_CLOUD_NAME = ""                    # Set your Cloudinary cloud name
-  GEMINI_API_KEY = ""                           # Set your Gemini API key
-  GOOGLE_API_KEY = ""                           # Set your Google API key
-  GOOGLE_CUSTOM_SEARCH_API_KEY = ""             # Set your Google custom search API key
-  GOOGLE_GEMINI_API_KEY = ""                    # Set your Google Gemini API key
-  MONGODB_API_KEY = ""                          # Set your MongoDB API key
-  MONGODB_EDGE_SERVER_TOKEN = ""                # Set your MongoDB edge server token
+  CLOUDINARY_CLOUD_NAME = ""                    
+  GEMINI_API_KEY = ""                          
+  GOOGLE_API_KEY = ""                           
+  GOOGLE_CUSTOM_SEARCH_API_KEY = ""             
+  GOOGLE_GEMINI_API_KEY = ""                    
+  MONGODB_API_KEY = ""                         
+  MONGODB_EDGE_SERVER_TOKEN = ""                
   # Add any other environment variables you need here
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"            # Netlify plugin for Next.js
-
-[[plugins]]
-  package = "netlify-plugin-inline-functions-env" # Inline functions environment plugin
+  package = "@netlify/plugin-nextjs"             
 
 # Uncomment and add any other desired plugins as needed
 # [[plugins]]
-#   package = "netlify-plugin-cloudinary"        # Optional: Cloudinary plugin
+#   package = "netlify-plugin-
 # [[plugins]]
-#   package = "netlify-plugin-amp-server-side-rendering" # Optional: AMP plugin
+#   package = "netlify-plugin-amp-server-side-rendering" 
 # [[plugins]]
-#   package = "netlify-plugin-html-validate"     # Optional: HTML validation plugin
+#   package = "netlify-plugin-html-validate"    
 # [[plugins]]
-#   package = "netlify-plugin-inline-critical-css" # Optional: Inline critical CSS plugin
+#   package = "netlify-plugin-inline-critical-css" 
 # [[plugins]]
-#   package = "netlify-plugin-image-optim"       # Optional: Image optimization plugin
+#   package = "netlify-plugin-image-optim"       
 # [[plugins]]
-#   package = "netlify-plugin-inline-source"     # Optional: Inline source plugin
+#   package = "netlify-plugin-inline-source"     
 
 [functions]
-  directory = "netlify/functions"               # Directory for serverless functions
+  directory = "netlify/functions"               
+
 
 
