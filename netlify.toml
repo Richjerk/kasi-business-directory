@@ -1,7 +1,6 @@
 [build]
   command = "flutter build web"               
-  publish = "build/web"                        
-  functions = "netlify/functions"
+  publish = "build/web"
 
            
 
@@ -34,10 +33,4 @@
 # [[plugins]]
 #   package = "netlify-plugin-image-optim"       
 # [[plugins]]
-#   package = "netlify-plugin-inline-source"     
-
-[functions]
-  directory = "netlify/functions"               
-
-
-
+#   package = "netlify-plugin-inline-source" 
