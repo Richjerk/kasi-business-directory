@@ -11,7 +11,7 @@
   "dependencies": {
     "@google/generative-ai": "^0.1.0",
     "@langchain/core": "^0.1.11",
-    "@langchain/google-genai": "^0.0.7",
+    "@langchain/google-genai": "^0.0.26",
     "@netlify/plugin-nextjs": "^5.7.4",
     "algoliasearch": "^5.8.0",
     "base64-js": "^1.5.1",
