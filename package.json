@@ -15,7 +15,7 @@
     "@netlify/plugin-nextjs": "^5.7.4",
     "algoliasearch": "^5.17.1",
     "base64-js": "^1.5.1",
-    "firebase": "^9.22.2",
+    "firebase": "^10.14.0",
     "instantsearch.js": "^4.74.2",
     "markdown-it": "^13.0.2",
     "netlify-plugin-inline-functions-env": "^1.0.9"
