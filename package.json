@@ -17,13 +17,12 @@
     "base64-js": "^1.5.1",
     "firebase": "^9.22.2",
     "instantsearch.js": "^4.74.2",
-    "markdown-it": "^13.0.2",
-    "netlify-plugin-inline-functions-env": "^1.0.9"
+    "markdown-it": "^13.0.2"
   },
   "devDependencies": {
     "netlify-plugin-cloudinary": "^1.17.0",
     "netlify-plugin-image-optim": "^0.4.0",
     "netlify-plugin-inline-source": "^1.0.4",
-    "vite": "^4.4.5"
+    "vite": "^2.6.0"
   }
 }
